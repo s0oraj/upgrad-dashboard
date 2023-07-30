@@ -157,3 +157,8 @@
   height: 100%;
   object-fit: cover; /* Ensure the image fits within the circular avatar */
 }
+
+/* Add a margin to the container to create space for the fixed footer */
+.Container {
+  margin-bottom: 70px; /* Adjust the value as needed to create enough space for the footer */
+}
