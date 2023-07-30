@@ -55,10 +55,8 @@
   padding: 20px;
   background-color: #282c34;
   color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .App-footer .MuiTypography-h6 {
@@ -149,7 +147,7 @@
   height: 32px;
   font-size: 1rem;
   overflow: hidden; /* Hide any overflow from the image */
-  borderRadius: 50%; /* Make the avatar circular */
+  border-radius: 50%; /* Make the avatar circular */
 }
 
 /* Style the image inside the mini avatar */
@@ -160,6 +158,6 @@
 }
 
 /* Add a margin to the container to create space for the fixed footer */
-.Container {
+.main-content {
   margin-bottom: 70px; /* Adjust the value as needed to create enough space for the footer */
 }

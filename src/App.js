@@ -186,8 +186,8 @@ function App() {
         </List>
       </Drawer>
       <main>
-        <Container maxWidth="xl">
-          <Paper elevation={3} className="table-container" style={{ borderRadius: 16, overflow: 'hidden' }}>
+        <Container maxWidth="xl" className="main-content">
+          <Paper elevation={3} className="table-container">
             {loading ? (
               <div className="loading">
                 <CircularProgress />
