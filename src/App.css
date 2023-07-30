@@ -1,38 +1,159 @@
+/* App.css */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: auto;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  padding: 20px;
+}
+
+/* Center the heading text */
+.header-text {
+  margin-left: 8px; /* Add margin to create space between the menu icon and heading text */
+}
+
+/* Add a flex container for the header toolbar */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Add padding to create space around elements */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  cursor: pointer;
+  margin-right: 20px; /* Add margin to create space between the menu icon and search */
+}
+
+/* Custom style for the search input in the toolbar */
+.search {
+  margin-left: 20px; /* Add margin to create space between the search icon and text */
+  display: flex; /* Add flex display to align the search icon and text correctly */
+  align-items: center; /* Vertically center the search icon and text */
+  color: white; /* Set the text color to white */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.App-footer {
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.App-footer .MuiTypography-h6 {
+  font-size: 18px;
+}
+
+.table-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.MuiDataGrid-root {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.MuiDataGrid-toolbarContainer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px 16px; /* Add horizontal padding to the toolbar */
 }
 
-.App-link {
-  color: #61dafb;
+.MuiDataGrid-columnsContainer {
+  justify-content: center;
+  flex-wrap: wrap; /* Allow columns to wrap to the next line if the toolbar is narrow */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiDataGrid-columnsContainer .MuiDataGrid-columnSeparator {
+  display: none; /* Hide the column separator to prevent spacing issues */
+}
+
+.MuiDataGrid-iconSeparator {
+  display: none;
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiTablePagination-caption {
+  flex: 0;
+}
+
+.MuiTablePagination-selectRoot {
+  flex: 0;
+}
+
+.MuiDataGrid-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.5rem;
+}
+
+/* Hide the icon in the footer (optional) */
+.App-footer .MuiAvatar-root {
+  display: none;
+}
+
+/* Add padding to the custom rows */
+.MuiDataGrid-row.custom-row {
+  padding-top: 6px; /* Half of the total 12px padding (2px margin) at the top */
+  padding-bottom: 6px; /* Half of the total 12px padding (2px margin) at the bottom */
+  height: 70px; /* Increase row height to 60px */
+  display: flex;
+  align-items: center; /* Vertically center the content within the rows */
+}
+
+/* Add margin to the profile photo circles */
+.MuiDataGrid-cellAvatar .avatar {
+  margin: 2px; /* 2-pixel margin for both top and bottom */
+}
+
+/* Add some spacing between pagination and the footer */
+.pagination {
+  margin-top: 20px;
+}
+
+/* Custom style for the mini avatar */
+.avatar-mini {
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  overflow: hidden; /* Hide any overflow from the image */
+  borderRadius: 50%; /* Make the avatar circular */
+}
+
+/* Style the image inside the mini avatar */
+.avatar-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fits within the circular avatar */
 }
