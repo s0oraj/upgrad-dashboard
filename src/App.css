@@ -61,7 +61,7 @@
 /* Add a container for the page content */
 .page-content {
   flex-grow: 1; /* Allow the page content to grow and fill the remaining space */
-  padding-top: 90px; /* Set the padding at the top to create space for the header */
+  padding-top: 95px; /* Set the padding at the top to create space for the header */
 }
 
 .App-footer {
