@@ -204,6 +204,7 @@ function App() {
                     Toolbar: CustomGridToolbar, // Use CustomGridToolbar here
                   }}
                   rowHeight={80} // Increase the row height
+                  headerHeight={80} // Increase the header height
                 />
               </div>
             )}
@@ -235,12 +236,17 @@ function App() {
 function CustomGridToolbar() {
   return (
     <GridToolbar>
-      <GridToolbarDensitySelector />
-      <GridToolbarFilterButton />
-      <GridToolbarColumnsButton />
-      <GridToolbarExport />
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingLeft: "10px", paddingRight: "10px" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <GridToolbarDensitySelector />
+          <GridToolbarFilterButton />
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <GridToolbarColumnsButton />
+          <GridToolbarExport />
+        </div>
+      </div>
     </GridToolbar>
   );
 }
-
 export default App;

@@ -6,7 +6,6 @@
   flex-direction: column;
   min-height: 100vh;
   width: auto;
-  
 }
 
 /* Add fixed positioning to keep the header at the top */
@@ -19,7 +18,6 @@
   left: 0;
   right: 0;
   z-index: 999;
-  
 }
 
 /* Center the heading text */
@@ -90,14 +88,31 @@
 
 .MuiDataGrid-toolbarContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Align items at the start and end of the toolbar */
+  align-items: center; /* Vertically center the items within the toolbar */
+  padding: 10px 16px;
+}
+
+/* Center the column header title text */
+.MuiDataGrid-colCellTitle {
+  display: flex;
   align-items: center;
-  padding: 10px 16px; /* Add horizontal padding to the toolbar */
+  justify-content: center;
+}
+
+/* Add margin to the column header title components */
+.MuiDataGrid-colCellTitle > * {
+  margin: 5px;
+}
+
+/* Center the filter and density selector buttons */
+.MuiDataGrid-toolbarContainer .MuiButtonBase-root {
+  margin: 0;
 }
 
 .MuiDataGrid-columnsContainer {
-  justify-content: center;
-  flex-wrap: wrap; /* Allow columns to wrap to the next line if the toolbar is narrow */
+  justify-content: flex-start; /* Change from center to flex-start to align items from the left */
+  flex-wrap: nowrap; /* Allow columns to wrap to the next line if the toolbar is narrow */
 }
 
 .MuiDataGrid-columnsContainer .MuiDataGrid-columnSeparator {
@@ -110,8 +125,13 @@
 
 .MuiDataGrid-columnHeaderTitle {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  flex-direction: column; /* Stack the items vertically */
+}
+
+.MuiDataGrid-columnHeaderTitle > * {
+  margin: 5px; /* Add some spacing between the items */
 }
 
 .MuiTablePagination-caption {
@@ -171,6 +191,7 @@
   height: 100%;
   object-fit: cover; /* Ensure the image fits within the circular avatar */
 }
+
 
 /* Add a margin to the container to create space for the fixed footer */
 .main-content {
