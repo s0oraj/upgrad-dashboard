@@ -6,14 +6,14 @@
   flex-direction: column;
   min-height: 100vh;
   width: auto;
-  position: relative;
 }
 
+/* Add fixed positioning to keep the header at the top */
 .App-header {
   background-color: #282c34;
   color: white;
   padding: 20px;
-  position: fixed; /* Add fixed positioning to keep the header at the top */
+  position: fixed;
   top: 0; /* Position the header at the top of the screen */
   left: 0;
   right: 0;
@@ -54,6 +54,12 @@
 .header-right {
   display: flex;
   align-items: center;
+}
+
+/* Add a container for the page content */
+.page-content {
+  flex-grow: 1; /* Allow the page content to grow and fill the remaining space */
+  padding-top: 80px; /* Set the padding at the top to create space for the header */
 }
 
 .App-footer {

@@ -185,7 +185,7 @@ function App() {
           {/* Add more items for the side navigation drawer here if needed */}
         </List>
       </Drawer>
-      <main>
+      <main className="page-content">
         <Container maxWidth="xl" className="main-content">
           <Paper elevation={3} className="table-container">
             {loading ? (
